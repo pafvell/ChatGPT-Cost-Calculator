@@ -28,13 +28,16 @@ function calculateTotal(words) {
       price = 0.002;
       break;
     case 'chatgpt-16k':
-      price = 0.004;
+      price = 0.0035;
       break;
-    case 'gpt4-8k':
-      price = 0.06;
+    case 'gpt4':
+      price = 0.09;
       break;
     case 'gpt4-32k':
-      price = 0.12;
+      price = 0.18;
+      break;
+    case 'gpt4-128k':
+      price = 0.04;
       break;
     default:
       break;

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OpenAI ChatGPT API 成本计算器（中文版）</title>
+    <title>OpenAI ChatGPT API Cost Calculator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="icon" href="https://openkey.cloud/logo.png"/>
@@ -48,48 +48,48 @@
 </head>
 <body>
     <div class="container">
-        <h1 class="title">OpenAI ChatGPT API 成本计算器（中文版）</h1>
-		<a href="https://github.com/terobox/ChatGPT-Cost-Calculator" target="_blank" rel="noopener noreferrer" style="display: block; margin: 0 auto; text-decoration: none; color: #a61b29; text-align: center;">GitHub链接</a>
+        <h1 class="title">OpenAI ChatGPT API Cost Calculator</h1>
         <br>
 		<h2 class="description">
-            这是一款专门为团队和开发者设计的工具，可以帮助用户准确预算和规划他们在项目中使用ChatGPT API的成本。
+            This tool is specifically crafted for teams and developers, aiding users in accurately budgeting and planning the costs associated with using the ChatGPT API in their projects.
         </h2>
         <div class="input-group">
-            <label for="word-count">输入汉字数量:</label>
+            <label for="word-count">Input the character count:</label>
             <input type="number" id="word-count" oninput="calcularResultado()" placeholder="e.g. 1000">
         </div>
           <div class="word-count-buttons">
-            <button class="word-count-btn pink" data-words="10000">1万</button>
-            <button class="word-count-btn green" data-words="200000">20万</button>
-            <button class="word-count-btn orange" data-words="1000000">100万</button>
-            <button class="word-count-btn blue" data-words="5000000">500万</button>
-            <button class="word-count-btn violet" data-words="10000000">1000万</button>
+            <button class="word-count-btn pink" data-words="10000">10K</button>
+            <button class="word-count-btn green" data-words="200000">200K</button>
+            <button class="word-count-btn orange" data-words="1000000">1M</button>
+            <button class="word-count-btn blue" data-words="5000000">5M</button>
+            <button class="word-count-btn violet" data-words="10000000">10M</button>
         </div>
         <div class="input-group selstyle">
           <div class="selstyle">
-            <label>选择语言模型:</label>
+            <label>Select ChatGPT Model:</label>
             <select id="model">
                 <option value="chatgpt-4k">GPT-3.5-Turbo 4K</option>
 				<option value="chatgpt-16k">GPT-3.5-Turbo 16K</option>
-                <option value="gpt4-8k">GPT-4.0 8K</option>
+                <option value="gpt4">GPT-4</option>
                 <option value="gpt4-32k">GPT-4 32K</option>
+                <option value="gpt4-128k">GPT-4-Turbo</option>
             </select>
           </div>
         </div>
         <div class="input-group">
-            <button id="calculate-btn">开始计算</button>
+            <button id="calculate-btn">Start Calculate</button>
         </div>
         <div class="result-container">
-            <h2>评估成本:</h2>
+            <h2>Estimated Cost:</h2>
             <p id="result">$0.00</p>
         </div>
     </div>
-    <div class="poweredby"><a href='#about-modal' class="modal-link"><button>关于我们</button></a></div>
+    <div class="poweredby"><a href='#about-modal' class="modal-link"></a></div>
     <div class="cookie-notification">
         <p>我们使用cookies来提高您在我们网站上的浏览体验。继续使用我们的网站，即表示您同意我们使用cookies。</p>
         <button id="cookie-accept">接受</button>
       </div>
-      
+
         <div id="about-modal" class="modal">
           <div class="modal-content">
             <br><br>
@@ -117,7 +117,7 @@
 				<br>
 				GPT-4.0 32K - $0.12 / 1K tokens
 				<br><br>
-				
+
 				2) 计算公式：
 				<br><br>
 				成本 = (中文字数 * 2 / 1000) * 模型价格
@@ -128,7 +128,7 @@
                 <button class="modal-close">关闭</button>
           </div>
         </div>
-		
+
     <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="cookies.js"></script>
     <script src="modal.js"></script>
     <script src="main.js"></script>
